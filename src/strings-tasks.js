@@ -464,7 +464,7 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/[a-zA-Z]/g, function (char) {
+  return str.replace(/[a-zA-Z]/g, function a(char) {
     const isUpperCase = char === char.toUpperCase();
     const baseCharCode = isUpperCase ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0);
     const offset = (char.charCodeAt(0) - baseCharCode + 13) % 26;
